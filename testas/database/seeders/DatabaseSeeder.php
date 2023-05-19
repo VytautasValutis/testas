@@ -105,6 +105,30 @@ class DatabaseSeeder extends Seeder
             'role' => 10,
             'password' => Hash::make('123'),
         ]);
+        DB::table('users')->insert([
+            'name' => 'Ruonis',
+            'email' => 'ruonis@gmail.com',
+            'role' => 10,
+            'password' => Hash::make('123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Zuikis',
+            'email' => 'zuikis@gmail.com',
+            'role' => 10,
+            'password' => Hash::make('123'),
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Arklys',
+            'email' => 'arklys@gmail.com',
+            'role' => 10,
+            'password' => Hash::make('123'),
+        ]);
+        foreach(range(0,14) as $k){
+            DB::table('orders')->insert([
+                'user_id' => rand(2, 6),
+                'hotel_id' => rand(1, 15),
+            ]);
+        }
 
     }
 }

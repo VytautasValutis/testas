@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('hotel_id');
+            $table->unsignedTinyInteger('confirmed')->default(0);
         });
     }
 
