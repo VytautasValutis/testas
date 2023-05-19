@@ -9,7 +9,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{route('country-create')}}" method="post">
+                    <form action="{{route('country-edit', $country)}}" method="post">
                         <div class="col col-6">
                             <label class="form-label">Country title</label>
                             <input type="text" class="form-control" name="title" value="{{$country->title}}">
