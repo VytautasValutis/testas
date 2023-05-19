@@ -42,7 +42,12 @@ class OrderController extends Controller
 
     public function edit(Order $order)
     {
-        //
+        $confirm = 1;
+        $order->update([
+            'confirmed' => $confirm,
+        ]);
+
+        return redirect()->back();
     }
 
     public function update(Request $request, Order $order)
@@ -52,6 +57,8 @@ class OrderController extends Controller
 
     public function destroy(Order $order)
     {
-        //
+        $order->delete();
+        return redirect()->back();
+
     }
 }

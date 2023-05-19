@@ -33,7 +33,7 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <div>
-                                <a href="" class="btn btn-outline-info mt-1">Edit countries</a>
+                                <a href="{{ route('country-index') }}" class="btn btn-outline-info mt-1">Edit countries</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -41,7 +41,12 @@
                                 <a href="" class="btn btn-outline-info mt-1 ms-2">Edit hotels</a>
                             </div>
                         </li>
-                    </ul>
+                         <li class="nav-item">
+                            <div>
+                                <a href="{{ route('order-index') }}" class="btn btn-outline-info mt-1 ms-2">Order list</a>
+                            </div>
+                        </li>
+                   </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

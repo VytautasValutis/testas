@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController as ORD;
+use App\Http\Controllers\CountryController as CNT;
 
 
 /*
@@ -27,6 +28,11 @@ Route::prefix('order')->name('order-')->group(function() {
     Route::get('/', [ORD::class, 'index'])->name('index');
     Route::get('/edit/{order}', [ORD::class, 'edit'])->name('edit');
     Route::delete('/delete/{order}', [ORD::class, 'destroy'])->name('delete');
-    // Route::post('/create', [HI::class, 'store'])->name('store');    
-    // Route::put('/edit/{client}', [HI::class, 'update'])->name('update');
+});
+
+Route::prefix('country')->name('country-')->group(function() {
+    Route::get('/', [CNT::class, 'index'])->name('index');
+    Route::get('/create}', [CNT::class, 'create'])->name('create');
+    Route::get('/edit/{country}', [CNT::class, 'edit'])->name('edit');
+    Route::delete('/delete/{order}', [CNT::class, 'destroy'])->name('delete');
 });
