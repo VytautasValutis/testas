@@ -37,25 +37,28 @@
                 <tr>
                     <th scope="col" class="">id</th>
                     <th scope="col" class="">Country</th>
-                    <th scope="col" class="">Season</th>
+                    <th scope="col" class="">Hotel</th>
+                    <th scope="col" class="">Photo</th>
+                    <th scope="col" class="">Trip long</th>
+                    <th scope="col" class="">Price</th>
                     <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                @forelse($countries as $country)
+                @forelse($hotels as $hotel)
                 <tr>
                     <td>
-                        {{$country->id}}
+                        {{$countries->where('id', $hotel->country_id)->first()->title}}
                     </td>
                     <td>
-                        {{$country->title}}
+                        {{$hotel->name}}
                     </td>
                     <td>
                         {{$country->season}}
                     </td>
                     <th>
-                        @include('back.editCountry')
+                        @include('back.editHotel')
                     </th>
                     <th>
                         <form action="{{route('country-delete', $country)}}" method="post">
